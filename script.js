@@ -23,7 +23,8 @@ function uploadImage() {
     })
     .then(data => {
         // Handle the response data here.  Put whatever you want (e.g., the javascript uses the response in data to do whatever cool updates to the page you want)
-        displayResults(data);
+        var responseExample = displayResults(data);
+        print(responseExample);
         alert("Server response:\n" + JSON.stringify(data, null, 2));
     })
     .catch(error => {
@@ -33,5 +34,5 @@ function uploadImage() {
 }
 
 function displayResults(data) {
-    print(data);
+    return data;
 }
