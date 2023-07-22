@@ -26,6 +26,7 @@ def convertImage(image):
     image = preprocess_input(image)
     return image
 
+#Takes an image and returns a dictionary with prediction information.
 def getPrediction(image):
     result = {}
     image = convertImage(image)
@@ -33,19 +34,22 @@ def getPrediction(image):
     y_prob = model.predict(image)
 
     #make numberPredictions be a list of the (incorrect) predicted categories in descending order
-    numberPredictions = np.argsort(y_prob[0])
+    numberPredictions = np.argsort(y_prob)[0]
+    numberPredictions = numberPredictions[::-1]
 
     #make y_prob be a list of the prediction values in descending order
     y_prob.sort()
     y_prob = y_prob[0][::-1]
 
+
+    #make predictions list be a list of the correct genre names mapped to the model's confidence in descending order
     predictions = {}
     for i in range(len(numberPredictions)):
         numberPredictions[i] = bad_to_good[numberPredictions[i]]
         predictions[num_to_class[numberPredictions[i]]] = y_prob[i]
+    
+    #add predictions to result dictionary inside 'Predictions' key
     result['Predictions'] = predictions
-    print(result)
+    return result
 
-# print(convertImage('koala.png'))
-# print(getPrediction('koala.png'))
-getPrediction('koala.png')
+print(getPrediction('koala.png'))
