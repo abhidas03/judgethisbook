@@ -11,8 +11,23 @@
 <body>
     <div id="top">
         <div id="input_box">
-            <div id="input">
-                <input type="image">
+            <script>
+                var loadFile = function(event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+            </script>
+            <div id="imagePreview" class="inner">
+                <img id="output" />
+            </div>
+            <div id="input" class="inner">
+                <form id="uploadForm" enctype="multipart/form-data">
+                    <input type="file" accept="image/*" name="image" id="imageInput" onchange="loadFile(event)">
+                    <input type="button" value="See prediction!" id="imageButton" onclick="uploadImage()">
+                </form>
+                
+                <!-- Update the source to jsAPI.js -->
+                <script src="script.js"></script>
             </div>
         </div>
         <div id="results">
@@ -21,7 +36,10 @@
         </div>
     </div>
     <div id="bottom">
-        <div id="description"></div>
+        <div id="description">
+            <h3 id="description">About This Project</h3>
+            <p>This website utilizes a convolutional neural net (CNN) in order to determine which of 30 genres a book is most likely to belong in.</p>
+        </div>
     </div>
 </body>
 <footer></footer>

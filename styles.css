@@ -3,17 +3,84 @@
     margin: 0px;
 }
 
+
 #top {
     margin-bottom: 10px;
-    height: 600px;
+    height: 500px;
     border-radius: 10px;
-}
-
-#bottom {
-    height: 400px;
-    border-radius: 10px;
+    width: 98%;
+    margin: 0 auto; 
 }
 
 #input_box {
-    height: 50%;
+    height: 300px;
+    margin: 25px;
+    max-width: 30%;
+    background-color: white; 
+    display: grid; 
+    place-items: center;
+    grid-template-rows: 2;
+    grid-template-columns: 1;
+}
+
+#input {
+    align-self:flex-end; 
+    margin-bottom: 10px;
+    background-color: white; 
+    border: none;
+    max-width: 85%;
+    grid-row-start: 2;
+    grid-row-end: 2;
+}
+
+#bottom {
+    height: auto;
+    border-radius: 10px;
+    width: 98%;
+    margin: 0 auto; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#description {
+    margin: 10px;
+    border: none;
+    text-align: center; 
+}
+
+#imageInput {
+    border: none;
+    margin: 5px;
+    width: 95%;
+    position: relative;
+}
+
+#imageButton {
+    margin: 5px;
+    width: 95%;
+}
+
+#imagePreview {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    max-width: 80%;
+    max-height: 80%;
+    border: none;
+}
+
+#imagePreview img {
+    object-fit: contain;
+    max-width: 100%; 
+    border: none;
+    max-height: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+    border: none;
+}
+
+p {
+    border: none;
 }
