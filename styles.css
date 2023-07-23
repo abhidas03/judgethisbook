@@ -1,4 +1,5 @@
 * {
+    border: 2px solid black;
     margin: 0px;
 }
 
@@ -87,8 +88,13 @@ h1 {
     text-align: center;
     margin: 10px;
     border: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 p {
     border: none;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
 }
