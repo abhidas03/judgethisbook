@@ -2,6 +2,15 @@
     margin: 0px;
 }
 
+:root {
+    --background-color: #27374D;
+    --box-color: #d4e9ff;
+    --text-color: #DDE6ED
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
 
 #top {
     margin-bottom: 10px;
@@ -15,7 +24,7 @@
     height: 300px;
     margin: 25px;
     max-width: 30%;
-    background-color: white; 
+    background-color: var(--box-color); 
     display: grid; 
     place-items: center;
     grid-template-rows: 2;
