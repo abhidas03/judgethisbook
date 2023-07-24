@@ -1,5 +1,5 @@
 * {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 0px;
 }
 
@@ -14,6 +14,8 @@ body {
 }
 
 #top {
+    display: grid;
+    grid-template-columns: 50% 50%;
     margin-bottom: 10px;
     height: 500px;
     border-radius: 10px;
@@ -22,6 +24,7 @@ body {
 }
 
 #input_box {
+    grid-column: 0 / 1;
     height: 300px;
     margin: 25px;
     max-width: 30%;
@@ -42,6 +45,17 @@ body {
     grid-row-end: 2;
 }
 
+#results {
+    display: flex;
+    flex-flow: column;
+    gap: 30px;
+    align-items: center;
+}
+
+#chart_div {
+    border: 0px;
+    justify-self: flex-end;
+}
 #bottom {
     height: auto;
     border-radius: 10px;
