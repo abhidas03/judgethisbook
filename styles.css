@@ -24,12 +24,12 @@ body {
     margin: 0 auto; 
     border: white 2px solid;
     padding-top: 20px;
+
 }
 
 #left_side {
     display: flex;
     flex-flow: column;
-    gap: 30px;
     align-items: center;
 }
 
@@ -59,8 +59,6 @@ body {
 #results {
     display: flex;
     flex-flow: column;
-    gap: 30px;
-    max-width: 100%;
     align-items: center;
 
 }
@@ -68,8 +66,7 @@ body {
 #chart_div {
     border: 0px;
     justify-self: flex-end;
-    max-width: 100%;
-
+    margin: 25px;
 }
 #bottom {
     height: auto;
@@ -77,7 +74,7 @@ body {
     width: 90%;
     margin: auto; 
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 70px;
     border-radius: 10px;
     border: white 2px solid;
     
@@ -131,6 +128,7 @@ p {
 
 h2 {
     font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 0px;
 }
 
 .fa.fa-github {
