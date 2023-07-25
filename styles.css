@@ -20,7 +20,7 @@ body {
     grid-template-columns: 50% 50%;
     height: 500px;
     border-radius: 10px;
-    width: 98%;
+    width: 90%;
     margin: 0 auto; 
     border: white 2px solid;
     padding-top: 20px;
@@ -60,25 +60,33 @@ body {
     display: flex;
     flex-flow: column;
     gap: 30px;
+    max-width: 100%;
     align-items: center;
+
 }
 
 #chart_div {
     border: 0px;
     justify-self: flex-end;
+    max-width: 100%;
+
 }
 #bottom {
     height: auto;
     border-radius: 10px;
-    width: 98%;
-    margin-bottom: 10px;
+    width: 90%;
+    margin: auto; 
     margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: white 2px solid;
+    
 }
 
 #description {
-    margin: 10px;
     border: none;
     text-align: center; 
+    padding: 20px;
 }
 
 #imageInput {
@@ -112,7 +120,6 @@ h1 {
     text-align: center;
     margin-top: 30px; 
     margin-bottom: 30px;
-    border: none;
     font-family: 'Courier New', Courier, monospace;
     display: grid; 
     justify-content: center; 
@@ -131,4 +138,12 @@ h2 {
     text-decoration: none; 
     align-self: flex-end; 
     padding-top: 5px;
+}
+
+a {
+    color: white;
+}
+
+#description_text {
+    margin-top: 5px;
 }
