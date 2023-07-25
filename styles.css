@@ -114,6 +114,8 @@ h1 {
     margin-bottom: 30px;
     border: none;
     font-family: 'Courier New', Courier, monospace;
+    display: grid; 
+    justify-content: center; 
 }
 
 p {
@@ -122,4 +124,11 @@ p {
 
 h2 {
     font-family: 'Courier New', Courier, monospace;
+}
+
+.fa.fa-github {
+    color: #d4e9ff; 
+    text-decoration: none; 
+    align-self: flex-end; 
+    padding-top: 5px;
 }
