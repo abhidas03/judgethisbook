@@ -1,6 +1,5 @@
 * {
-    /* border: 2px solid black; */
-    margin: 0px;
+    /* margin: 0px; */
 }
 
 :root {
@@ -26,6 +25,7 @@ body {
     margin: 0 auto; 
     border: white 2px solid;
     padding-top: 20px;
+    padding-bottom: 20px;
 
 }
 
@@ -42,7 +42,7 @@ body {
     height: 300px;
     margin: 25px;
     max-width: 100%;
-    background-color: var(--box-color); 
+    /* background-color: var(--box-color);  */
     display: grid; 
     place-items: center;
     grid-template-rows: 2;

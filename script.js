@@ -32,7 +32,6 @@ function uploadImage() {
         alert("Error uploading image: " + error);
     });
 }
-
 function drawChart() {
     // Create the data table.
     
@@ -79,6 +78,7 @@ function drawChart() {
 
 function displayResults(predictions) {
     // Load the Visualization API and the corechart package.
+    chartOn = true;
     google.charts.load('current', {'packages':['corechart']});
     console.log(predictions);
     // Set a callback to run when the Google Visualization API is loaded.
@@ -89,4 +89,7 @@ function displayResults(predictions) {
     
 }
 
-window.addEventListener("resize", drawChart);
+var chartOn = false;
+if (chartOn) {
+    window.addEventListener("resize", drawChart);
+}
