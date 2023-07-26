@@ -54,13 +54,21 @@ function drawChart() {
       ['Pepperoni', 2]
     ]);
 
-   let width = document.getElementById('top').offsetWidth;
-    console.log(width);
+   let topWidth = document.getElementById('top').offsetWidth;
+   let screenWidth = window.innerWidth;
+   if (screenWidth > 710) {
+        width = 600;
+        height = 500;
+    }
+    else {
+        width = .9*topWidth;
+        height = .6*topWidth;
+    }
     // Set chart options
     var options = {'title':'How Much Pizza I Ate Last Night',
                 //    'chartArea': {'left': '10', 'top': '20','right': '10', 'bottom': '20'},
-                   'width': .5*width,
-                   'height': .3*width,
+                   'width': width,
+                   'height': height,
                    'legend': {'position': 'bottom'},
                   };
 
