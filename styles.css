@@ -1,13 +1,9 @@
-* {
-    /* border: 2px solid black; */
-    margin: 0px;
-}
-
 :root {
     --background-color: #27374D;
     --box-color: #d4e9ff;
     --text-color: #DDE6ED
 }
+
 body {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -16,9 +12,10 @@ body {
 }
 
 #top {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 125%;
     border-radius: 10px;
     width: 90%;
     margin: 0 auto; 
@@ -31,6 +28,7 @@ body {
 }
 
 #left_side {
+    min-width: 500px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -42,12 +40,13 @@ body {
     height: 300px;
     margin: 25px;
     max-width: 100%;
-    background-color: var(--box-color); 
+    /* background-color: var(--box-color);  */
     display: grid; 
     place-items: center;
     grid-template-rows: 2;
     grid-template-columns: 1;
 }
+
 
 #input {
     align-self:flex-end; 
@@ -66,11 +65,12 @@ body {
 
 }
 
-#chart_div {
+.div #chart_div {
     border: 0px;
     justify-self: flex-end;
     margin: 25px;
 }
+
 #bottom {
     height: auto;
     border-radius: 10px;
@@ -113,7 +113,7 @@ body {
     object-fit: contain;
     max-width: 100%; 
     border: none;
-    max-height: 100%;
+    max-height: 250px;
 }
 
 h1 {
