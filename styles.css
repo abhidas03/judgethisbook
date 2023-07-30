@@ -24,6 +24,9 @@ body {
     margin: 0 auto; 
     border: white 2px solid;
     padding-top: 20px;
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
 
 }
 

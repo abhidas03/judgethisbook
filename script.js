@@ -10,7 +10,7 @@ function uploadImage() {
     formData.append("image", file);
 
     //    const apiEndpoint = "backend/bookAPI.py";
-    const apiEndpoint = "https://cs.swarthmore.edu/~pdevlin2/book_site/backend/bookAPI.py"
+    const apiEndpoint = "/~pdevlin2/book_site/backend/bookAPI.py"
     fetch(apiEndpoint, {
         method: "POST",
         body: formData
@@ -23,9 +23,10 @@ function uploadImage() {
     })
     .then(data => {
         // Handle the response data here.  Put whatever you want (e.g., the javascript uses the response in data to do whatever cool updates to the page you want)
-        var responseExample = displayResults(data);
-        print(responseExample);
+        var responseExample = displayResults(data["predictions"]);
+        //print(responseExample);
         alert("Server response:\n" + JSON.stringify(data, null, 2));
+
     })
     .catch(error => {
         // Handle any errors here
