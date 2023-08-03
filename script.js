@@ -1,4 +1,5 @@
 var predictions;
+
 function uploadImage() {
     const inputElement = document.getElementById("imageInput");
     const file = inputElement.files[0];
@@ -10,13 +11,20 @@ function uploadImage() {
     const formData = new FormData();
     formData.append("image", file);
 
-    //    const apiEndpoint = "backend/bookAPI.py";
+    //loading gif 
+    let loading = document.createElement('img');
+    let chart = document.getElementById('chart_div');
+    let temp = chart;
+    loading.src = './public/robot-think.gif';
+    chart.replaceWith(loading);
+
     const apiEndpoint = "/~pdevlin2/book_site/backend/bookAPI.py"
     fetch(apiEndpoint, {
         method: "POST",
         body: formData
     })
     .then(response => {
+        loading.replaceWith(temp);
         if (!response.ok) {
             throw new Error("Network response was not ok");
         }
@@ -32,6 +40,7 @@ function uploadImage() {
         // Handle any errors here
         alert("Error uploading image: " + error);
     });
+
 }
 
 
@@ -48,7 +57,6 @@ function displayResults() {
     // draws it.
     function drawChart() {
         // Create the data table.
-        console.log(predictions);
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Genre');
         data.addColumn('number', 'Prediction %');
