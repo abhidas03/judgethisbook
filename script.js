@@ -24,14 +24,9 @@ function uploadImage() {
     })
     .then(data => {
         // Handle the response data here.  Put whatever you want (e.g., the javascript uses the response in data to do whatever cool updates to the page you want)
-
-        console.log(data)
         predictions = data['predictions'];
         predictions = Object.entries(predictions);
-        console.log(predictions);
         displayResults();
-        alert("Server response:\n" + JSON.stringify(data, null, 2));
-
     })
     .catch(error => {
         // Handle any errors here
@@ -73,7 +68,6 @@ function displayResults() {
             }
             // Set chart options
             var options = {'title':'Predictions',
-                        //    'chartArea': {'left': '10', 'top': '20','right': '10', 'bottom': '20'},
                         'width': width,
                         'height': height,
                         'legend': {'position': 'bottom'},
